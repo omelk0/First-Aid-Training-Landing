@@ -31,3 +31,38 @@ export function setTimer() {
     const interval = setInterval(updateTimer, 1000);
     updateTimer();
 }
+
+export function triggerRegistration() {
+    let registerButton = document.querySelector('.section-6__button');
+    let registerForm = document.querySelector('.register-popup');
+    let closeRegisterFormButton = document.querySelector('.register-popup__close-button');
+
+    registerButton.addEventListener('click', () => {
+        registerForm.classList.toggle('show')
+    })
+
+    closeRegisterFormButton.addEventListener('click', () => {
+        registerForm.classList.remove('show')
+    })
+}
+
+export function sendRegistrationForm() {
+    let form = document.querySelector('.register-popup__form');
+    let sendRegistrationFormButton = document.querySelector('.register-popup__button');
+    let registerForm = document.querySelector('.register-popup');
+    let successMessage = document.querySelector('.form-sent-popup');
+    let closeSuccessMessageButton = document.querySelector('.form-sent-popup__button');
+
+    form.addEventListener('submit', (e)=> {
+        e.preventDefault();
+    })
+
+    sendRegistrationFormButton.addEventListener('click', (e) => {
+        registerForm.classList.toggle('show');
+        successMessage.classList.toggle('show');
+    })
+
+    closeSuccessMessageButton.addEventListener('click', () => {
+        successMessage.classList.remove('show');
+    })
+}
