@@ -7,8 +7,7 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "zip": "gulp deployZip --build",
-    "svgSprive": "gulp svgSprive"
+    "zip": "gulp deployZip --build"
   },
   "author": "Oleksandr Melnychek",
   "license": "ISC",

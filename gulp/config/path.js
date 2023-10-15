@@ -20,7 +20,6 @@ export const path = {
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
         svg: `${srcFolder}/img/**/*.svg`,
         files: `${srcFolder}/files/**/*.*`,
-        svgicons: `${srcFolder}/svgicons/*.svg`
     },
     watch: {
         html: `${srcFolder}/**/*.html`,

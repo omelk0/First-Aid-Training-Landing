@@ -1,0 +1,112 @@
+.section-6 {
+    padding: 100px 0;
+
+    &__content {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    &__content-title {
+        text-align: center;
+        font-size: 68px;
+        font-weight: 500;
+
+        @media(max-width:480px) {
+            font-size: 54px;
+        }
+    }
+
+    &__content-subtitle {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 300;
+        margin-bottom: 55px;
+
+        @media(max-width:480px) {
+            font-size: 26px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @media(max-width: 1300px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__list-item {
+        border: 2px solid $main-color;
+        padding: 25px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 305px;
+        height: 305px;
+        box-shadow: $main-shadow;
+        transition: $main-transition;
+
+        &:nth-child(odd) {
+            background: $main-color;
+            color: #FFF;
+        }
+
+        @media(max-width: 1300px) {
+            width: 250px;
+            height: 250px;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__list-item-image {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        transition: $main-transition;
+
+        @media(max-width: 1300px) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    &__list-item-text {
+        margin: 5px 0 10px;
+        text-align: center;
+    }
+
+    &__list-item-title {
+        font-size: 48px;
+        font-weight: 500;
+
+        @media(max-width: 1300px) {
+            font-size: 36px;
+        }
+    }
+
+    &__list-item-info {
+        font-size: 28px;
+
+        @media(max-width: 1300px) {
+            font-size: 22px;
+        }
+    }
+
+    &__additional-info {
+        margin-top: 25px;
+        max-width: 324px;
+        margin-left: auto;
+        text-align: right;
+        font-size: 24px;
+        font-weight: 300;
+    }
+}
