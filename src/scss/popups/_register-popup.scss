@@ -1,0 +1,142 @@
+.register-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+
+    &__content {
+        width: 843px;
+        height: 491px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 40px 50px;
+
+        @media(max-width:1000px) {
+            width: 600px;
+            height: 400px;
+        }
+
+        @media(max-width:650px) {
+            width: 400px;
+            height: 600px;
+        }
+
+        @media(max-width:450px) {
+            width: 300px;
+            height: 600px;
+            padding: 40px 15px 20px;
+        }
+    }
+
+    &__close-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 68px;
+        font-weight: 500;
+        margin-bottom: 50px;
+
+        @media(max-width:1000px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        @media(max-width:650px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__form-part {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__form-input {
+        display: block;
+        width: 100%;
+        margin-bottom: 27px;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 16px;
+        border: 1px solid #858C94;
+        outline: none;
+        height: 48px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media(max-width:1000px) {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form-textarea {
+        resize: none;
+        display: block;
+        height: 198px;
+        margin-bottom: 27px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 16px;
+        border: 1px solid #858C94;
+        outline: none;
+        margin-bottom: 27px;
+
+        @media(max-width:1000px) {
+            height: 160px;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width:650px) {
+            height: 120px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        height: 48px;
+        width: 100%;
+        background: $main-color;
+        outline: none;
+        cursor: pointer;
+        color: #FFF;
+        font-size: 36px;
+        font-weight: 500;
+        border: none;
+
+        @media(max-width:1000px) {
+            height: 40px;
+            font-size: 24px;
+        }
+
+        &:active {
+            transform: translateY(-5px);
+        }
+    }
+}
