@@ -5,7 +5,7 @@ export function setTimer() {
     const secondsElement = document.querySelector(".section-6__time-part--seconds .section-6__time-part-value");
 
     function updateTimer() {
-        const finalDate = new Date("Mar 9, 2024 19:00:00").getTime();
+        const finalDate = new Date("Mar 9, 2024 09:00:00").getTime();
         const now = new Date().getTime();
         const distance = finalDate - now;
 
