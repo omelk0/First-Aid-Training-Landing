@@ -1,84 +1,81 @@
 .swiper-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .swiper {
-    width: 800px;
-    height: 350px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0 !important;
-    margin: 0 !important;
+  width: 800px;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 !important;
 }
 
 .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    background: $main-color;
-    position: relative;
-    box-shadow: $main-shadow;
-    display: flex !important;
+  background-position: center;
+  background-size: cover;
+  background: $main-color;
+  position: relative;
+  box-shadow: $main-shadow;
+  display: flex !important;
+  justify-content: center;
+  gap: 40px;
+
+  &__number {
+    font-size: 36px;
+    width: 30%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+  }
 
-    &__number {
-        font-size: 36px;
-        width: 30%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+  &__number-day {
+    color: #fff;
+    font-size: 48px;
+  }
 
-        div {
-            color: #fff;
-            font-size: 48px;
-        }
-        span {
-            display: block;
-            color: #fff;
-            font-size: 84px;
-        }
-    }
-
-    &__text {
-        display: block;
-        width: 70%;
-        padding: 40px 0;
-        color: #fff;
-    }
-
-    &__text-title {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-
-    &__text-subtitle {
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
-
-    &__text-list {
-        list-style-position: inside;
-        margin-bottom: 20px;
-    }
-}
-
-.swiper-slide img {
+  &__number-value {
     display: block;
-    width: 100%;
+    color: #fff;
+    font-size: 96px;
+  }
+
+  &__text {
+    display: block;
+    width: 70%;
+    padding: 40px 0;
+    color: #fff;
+  }
+
+  &__text-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  &__text-subtitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  &__text-list {
+    list-style-position: inside;
+    margin-bottom: 20px;
+  }
 }
+
+/* Rewriting Slider Default Styles  */  
 
 .swiper-cube .swiper-cube-shadow:before {
-    display: none;
+  display: none;
 }
 
 .swiper-pagination {
-    width: 30% !important;
+  bottom: -30px !important;
 }
 
 .swiper-pagination-bullet-active {
-    background: #fff !important;
+  background: $main-color !important;
 }
