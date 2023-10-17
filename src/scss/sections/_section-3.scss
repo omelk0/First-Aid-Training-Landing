@@ -61,6 +61,11 @@
     top: 0;
     overflow: hidden;
   }
+  
+  &__list-item-image {
+    width: 100%;
+    height: 100%;
+  }
 
   &__list-item-overlay-social-item-link {
     img {
@@ -86,6 +91,7 @@
   &__list-item-overlay-social {
     display: flex;
     align-items: center;
+    padding-top: 80px;
   }
 
   &__list-item-overlay-social-item {
