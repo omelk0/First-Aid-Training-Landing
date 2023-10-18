@@ -74,11 +74,25 @@ export function sendRegistrationForm() {
   });
 
   sendRegistrationFormButton.addEventListener("click", (e) => {
-    registerForm.classList.toggle("show");
-    successMessage.classList.toggle("show");
+    if (checkForm()) {
+      registerForm.classList.toggle("show");
+      successMessage.classList.toggle("show");
+    }
+
+    closeSuccessMessageButton.addEventListener("click", () => {
+      successMessage.classList.remove("show");
+    });
   });
 
-  closeSuccessMessageButton.addEventListener("click", () => {
-    successMessage.classList.remove("show");
-  });
+  function checkForm() {
+    let inputs = document.querySelectorAll(".register-popup__form-input");
+
+    for (let input of inputs) {
+      if (input.value === "") {
+        return false;
+      }
+    }
+
+    return true;
+  }
 }
